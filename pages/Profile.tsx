@@ -1,12 +1,13 @@
 import * as React from 'react';
+import { useTranslation } from 'react-i18next';
 
-const Profile = ()=>{
-
+const Profile = () => {
+  const { t } = useTranslation(['profile']);
   return (
     <div>
-      <h3>Profile</h3>
+      <h3>{t('profile')}</h3>
     </div>
-  )
-}
+  );
+};
 
 export default Profile;
