@@ -10,6 +10,6 @@ export default function App() {
       <Routes>
         <Route exact path="/" component={Home} />
       </Routes>
-    ]</BrowserRouter>
+    </BrowserRouter>
   );
 }
