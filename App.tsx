@@ -1,13 +1,15 @@
 import * as React from 'react';
-import { useTranslation } from 'react-i18next';
+import { BrowserRouter, Route, Routes}  from "react-router-dom";
+import Home from './pages/Home';
+
 import './style.css';
 
 export default function App() {
-  const { t, i18n } = useTranslation();
   return (
-    <div>
-      <h1>{t('intro.label')}</h1>
-      <p>Start editing to see some magic happen :)</p>
-    </div>
+    ]<BrowserRouter>
+      <Routes>
+        <Route exact path="/" component={Home} />
+      </Routes>
+    ]</BrowserRouter>
   );
 }
