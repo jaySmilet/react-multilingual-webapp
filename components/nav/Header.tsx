@@ -25,6 +25,13 @@ const Header = () => {
               Profile
             </Link>
           </li>
+          <li className="nav-item">
+            <select className="nav-link bg-dark border-0 ml-1 mr-2">
+              <option value="en">English</option>
+              <option value="fr">French</option>
+              <option value="es">Spanish</option>
+            </select>
+          </li>
         </ul>
       </div>
     </nav>
