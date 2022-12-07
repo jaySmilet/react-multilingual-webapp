@@ -1,7 +1,13 @@
+import i18next from 'i18next';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+  const handleChange = (e) => {
+    console.log(e.target.value);
+    i18next.changeLanguage(e.target.value);
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <Link className="navbar-brand" to="/">
@@ -26,7 +32,10 @@ const Header = () => {
             </Link>
           </li>
           <li className="nav-item">
-            <select className="nav-link bg-dark border-0 ml-1 mr-2">
+            <select
+              className="nav-link bg-dark border-0 ml-1 mr-2"
+              onChange={handleChange}
+            >
               <option value="en">English</option>
               <option value="fr">French</option>
               <option value="es">Spanish</option>
